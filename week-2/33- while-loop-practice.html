@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="txtNumber">
+    <button onclick="calculate()">Calculate</button>
+    <script>
+      const numberEl = document.querySelector("#txtNumber");
+      
+      // 5438
+      // 543,8
+      // 543
+      function calculate(){
+
+        let total = 0;
+        let num = Number(numberEl.value);
+        num = Math.abs(num);
+        
+        while(num>0){
+          const digit = num % 10;
+          console.log("digit: ", digit);
+          total += digit;
+          num = Math.floor(num / 10);
+        }
+        alert(total);
+      }
+    </script>
+  </body>
+</html>
