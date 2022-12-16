@@ -7,30 +7,43 @@
     <title>Document</title>
   </head>
   <body>
+
     <input type="number" id="txtNumber">
     <button onclick="calculate()">Calculate</button>
+
     <script>
       const numberEl = document.querySelector("#txtNumber");
       
+
       function calculate(){
-        let num=Number(numberEl.value)
-        if(num<=0){
-            alert("please enter greater than zero");
-            return;
+        let num = Number(numberEl.value); //10
+        if(num<0){
+          alert("Please enter greater than zero");
+          return;
         }
-        if(!num==0)num=1;
 
-        let factoriyel=1;
+        if(!num) num=1;
+        //if(num==o)num=1;
 
-        do {
-            factoriyel*=num;
-            num--;
-            
-        } while (num>1);
 
-        alert(factoriyel);
+        let factoriel = 1;
+
+        // 6! = 6 * 5 * 4 * 3 * 2 * 1;
+
+        do{
+          factoriel *= num; // 10  - 90
+          num--; // 9 - 8
+        }
+        while(num>1)
+
+        alert(factoriel);
+
+
       }
-      
+
+
+
+
     </script>
   </body>
 </html>

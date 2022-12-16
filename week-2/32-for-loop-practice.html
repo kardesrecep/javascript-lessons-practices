@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="number" id="txtRate">
+    <input type="number" id="txtRate" />
     <button onclick="calculatePrices()">Update</button>
     <ul id="productList">
       <li>Notebook <span>1200</span>$</li>
@@ -19,16 +19,16 @@
       const rateEl = document.querySelector("#txtRate");
       const productListEl = document.querySelectorAll("#productList li");
       console.log(productListEl);
-      function calculatePrices(){
+
+      function calculatePrices() {
         const rate = Number(rateEl.value);
-        for(let i=0; i<productListEl.length; i++){
+
+        for (let i = 0; i < productListEl.length; i++) {
           const elPrice = productListEl[i].querySelector("span");
           let price = Number(elPrice.innerText);
-          price = price + price * rate / 100;
+          price = price + (price * rate) / 100;
           elPrice.innerText = price;
-          
         }
-       
       }
     </script>
   </body>
