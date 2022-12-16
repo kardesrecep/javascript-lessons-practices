@@ -35,7 +35,7 @@ function hesapla(){
     }
     mesaj.classList.remove("d-none");
     mesaj.classList.add("mesaj");
-    mesaj.innerText = `Ortalamanız : ${sonuc}, Notunuz : ${not}`;
+    mesaj.innerText = `Ortalamaniz : ${sonuc}, Notunuz : ${not}`;
 }
 
 function sil(){
