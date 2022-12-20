@@ -1,0 +1,12 @@
+.container {
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+    right: auto;
+    bottom: auto;
+    background-color: rgb(176, 86, 176);
+    padding: 7rem;
+  }
+  span {
+    background-color: bisque;
+  }
